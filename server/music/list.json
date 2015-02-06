@@ -1,0 +1,42 @@
+{
+    "list": [
+        {
+            "id": "1", "name": "Let It Go", 
+            "typeId": "1", "typeName": "Pop", 
+            "artist": "Idina Menzel'",
+            "lrc": "The snow blows white on the mountain tonight<br>Not a footprint to be seen<br>A kingdom of isolation and it looks like I'm the Queen<br>The wind is howling like the swirling storm inside<br>Couldn't keep it in, heaven knows I tried<br>Don't let them in, don't let them see<br>Be the good girl<br>You always had to be<br>Conceal, don't feel<br>Don't let them know<br>Well, now they know<br>Let it go<br>Let it go<br>Can't hold it back anymore<br>Let it go<br>Let it go<br>Turn away and slam the door<br>I don't care<br>What they're going to say<br>Let the storm rage on<br>The cold never bothered me anyway<br><br>It's funny how some distance<br>Makes everything seem small<br>And the fears that once controlled me<br>Can't get to me at all<br>It's time to see what I can do<br>To test the limits and break through<br>No right, no wrong, no rules for me<br>I'm free<br>Let it go<br>Let it go<br>I am one with the wind and sky<br>Let it go<br>Let it go<br>You'll never see me cry<br>Here I stand<br>And here I stay<br>Let the storm rage on<br><br>My power flurries through the air into the ground<br>My soul is spiraling in frozen fractals all around<br>And one thought crystallizes like an icy blast<br>I'm never going back<br>The past is in the past<br>Let it go<br>Let it go<br>And I'll rise like the break of dawn<br>Let it go<br>Let it go<br>That perfect girl is gone<br>Here I stand in the light of day<br>Let the storm rage on<br>The cold never bothered me anyway"
+        },
+        {
+            "id": "2", "name": "Sound Of Silence",
+            "typeId": "1", "typeName": "Pop",
+            "artist": "Ania",
+            "lrc": "Hello darkness, my old friend<br>I've come to talk with you again<br>Because a vision softly creeping<br>Left its seeds while I was sleeping<br>And the vision that was planted in my brain<br>Still remains<br>Within the sound of silence<br>In restless dreams I walked alone<br>Narrow streets of cobblestone<br>'Neath the halo of a street lamp<br>I turned my collar to the cold and damp<br>When my eyes were stabbed by the flash of a neon light<br>That split the night<br>And touched the sound of silence<br><br>And in the naked light I saw<br>Ten thousand people, maybe more<br>People talking without speaking<br>People hearing without listening<br>People writing songs that voices never share<br>And no one dare<br>Disturb the sound of silence<br><br>Fools said I, You do not know<br>Silence like a cancer grows<br>Hear my words that I might teach you<br>Take my arms that I might reach to you<br>But my words like silent raindrops fell<br>And echoed in the wells of silence<br><br>Hmmm..Hmmm..Hmmm..Hmmm..<br>Hmmm..Hmmm..Hmmm..<br>Hmmm..Hmmm..Hmmm..Hmmm..Hmm..Hmm..Hmm..<br>Hmmm..Hmmm..Hmmm..<br>Hmmm..Hmmm..Hmmm..Hmmm..<br>Within the sound of silence"
+        },
+        {
+            "id": "3", "name": "Country Road Take Me Home",
+            "typeId": "2", "typeName": "Country",
+            "artist": "John Denver",
+            "lrc": "Almost heaven west virginia<br>Blue ridge mountains shenandoah river<br>Life is old there older than the trees<br>Younger than the mountains<br>Growin like a breeze<br>Country roads take me home<br>To the place I belong<br>West virginia<br>Mountain momma<br>Take me home country roads<br>All my memories gather round her<br>Miners lady stranger to blue water<br>Dark and dusty painted on the sky<br>Misty taste of moon shine<br>Tear drops in my eyes<br>Country roads take me home<br>To the place I belong<br>West virginia<br>Mountain momma<br>Take me home country roads<br><br>I hear her voice in the morning hours she calls me<br>Radio reminds me of my home far away<br>Driving down the road I get a feeling that I shoul'd have been home<br>Yesterday<br>Yesterday<br>Country roads take me home<br>To the place I belong<br>West virginia<br>Mountain momma<br>Take me home country roads<br>Country roads take me home<br>To the place I belong<br>West virginia<br>Mountain momma<br>Take me home country roads<br>Take me home country roads<br>Take me home country roads"
+        },
+        {
+            "id": "4", "name": "Safe And Sound",
+            "typeId": "2", "typeName": "Country",
+            "artist": "Taylor Swift",
+            "lrc": "I remember tears streaming down your face<br>When I said, \"I'll never let you go\"<br>When all those shadows almost killed your light<br>I remember you said, \"Don't leave me here alone\"<br>But all that's dead and gone and passed tonight<br>Just close your eyes<br>The sun is going down<br>You'll be alright<br>No one can hurt you now<br>Come morning light<br>You and I'll be safe and sound<br><br>Don't you dare look out your window darling<br>Everything's on fire<br>The war outside our door keeps raging on<br>Hold onto this lullaby<br>Even when the music's gone, gone<br>Just close your eyes<br>The sun is going down<br>You'll be alright<br>No one can hurt you now<br>Come morning light<br>You and I'll be safe and sound<br><br>Oooh, Oooh, Oooh, Oooh<br>Oooh, Oooh, Oooh, Oooh<br>Just close your eyes<br>You'll be alright<br>Come morning light,<br>You and I'll be safe and sound...<br>Oooh, oooh, oooh, oooh oh oh"
+        }
+    ],
+    "msg": "",
+    "code": "0"
+}
+
+
+
+
+
+
+
+
+
+
+
+

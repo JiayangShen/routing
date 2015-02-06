@@ -1,0 +1,8 @@
+{
+    "types": [
+        { "id": "1", "name": "Pop" },
+        { "id": "2", "name": "Country" }
+    ],
+    "msg": "",
+    "code": "0"
+}

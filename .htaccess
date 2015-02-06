@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteBase /
+RewriteRule ^[^\s\.]*(\?(.*))?$ index.htm?$2
