@@ -1,7 +1,7 @@
 ﻿
 ;(function($, W)
 {
-    var R = G.ns('G.Router'), currentPath, 
+    var R = G.ns('G.Router'), current, 
         location = history.location || document.location,
         $body = $('body'), $pageBody = $body.find('#pageBody');
     G.extend(R, {
@@ -10,12 +10,14 @@
             urlInfo = urlInfo ? urlInfo : '/';
             urlInfo = urlInfo.href ? urlInfo : typeof urlInfo == 'string' ? $('<a>').attr('href', urlInfo)[0] : location;
             var path = decodeURI(urlInfo.pathname).replace(/\/$/, ''),
+                pUrl = urlInfo.pathname + urlInfo.search,
                 route = R.routes[path || '/'];
             
-            if(!route || path === currentPath) return;
+            if(!route || pUrl === current) return;
             
             var args = G.Util.getUrlArgs(urlInfo),
-                actions = route.actions || [],
+                actions = (route.actions && route.actions.length) ?
+                    route.actions : [{method: 'init'}],
                 C = G.Config, A = G.ns(C.ajaxHost),
                 moduleName = C.moduleHost + path.replace(/\//g, '.').replace(/\b\w/g, function(m){return m.toUpperCase()}),
                 module = G.ns(moduleName),
@@ -27,14 +29,10 @@
             
             if(beforeRoute && beforeRoute(route, routeInfo) === false) return;
             
-            currentPath = path;
-            var needAction = $.when($.needCSS(route.styles), $.needJS(route.scripts));
+            current = pUrl;
+            var $container = $('<div class="container">').appendTo($pageBody).hide().fadeIn(),
+                needAction = $.when($.needCSS(route.styles), $.needJS(route.scripts));
             !urlInfo.reload && history.pushState(0, 0, urlInfo.href);
-            
-            !actions.length && needAction.done(function()
-            {
-                module.init && module.init($pageBody, routeInfo);
-            });
             
             for(var i = 0, action; action = actions[i]; i++)
             {
@@ -51,7 +49,7 @@
                 var method = ns[methodName];
                 if(method)
                 {
-                    method($pageBody, routeInfo, ajaxAction);
+                    method($container, routeInfo, ajaxAction);
                 } else
                 {
                     (function(ns, methodName, ajaxAction)
@@ -59,7 +57,7 @@
                         needAction.done(function()
                         {
                             var method = ns[methodName];
-                            method && method($pageBody, routeInfo, ajaxAction);
+                            method && method($container, routeInfo, ajaxAction);
                         });
                     })(ns, methodName, ajaxAction);
                 }
@@ -94,7 +92,10 @@
         }
         $pageNav.empty();
         path != '/' && $pageNav.html(navs);
-        $pageBody.empty();
+        
+        $pageBody.find('> .container')
+        .animate({opacity: 0, width: 0}, 400, 'linear', 
+            function(){ $(this).empty().remove(); });
     }
 
 })(jQuery, window);

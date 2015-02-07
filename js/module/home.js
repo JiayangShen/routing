@@ -2,7 +2,7 @@
 ;(function(window)
 {
     //Home init
-    Module.init = function($pageBody, routeInfo)
+    Module.init = function($container, routeInfo)
     {
         var routes = G.Router.routes, $tiles = $('<div class="tiles"></div>');
         for(var p in routes)
@@ -11,7 +11,7 @@
             if(ln != 2 || p == '/') continue;
             $('<a>').attr('href', p).text(routes[p].title).appendTo($tiles);
         }
-        $pageBody.html($tiles);
+        $container.html($tiles);
     }
 
 })(window);

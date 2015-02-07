@@ -1,7 +1,7 @@
 ﻿;(function(window)
 {
     var M = G.ns('Module.Music');
-    M.init = function($pageBody, routeInfo, ajaxAction)
+    M.init = function($container, routeInfo, ajaxAction)
     {
         ajaxAction.done(function(rsp)
         {
@@ -10,7 +10,7 @@
             {
                 $('<a>').attr('href', '/music/list/?i=' + type.id).text(type.name).appendTo($tiles);
             }
-            $pageBody.html($tiles);
+            $container.html($tiles);
         });
     }
 
