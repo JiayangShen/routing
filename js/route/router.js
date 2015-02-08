@@ -8,9 +8,11 @@
         route: function(urlInfo, beforeRoute)
         {
             urlInfo = urlInfo ? urlInfo : '/';
-            urlInfo = urlInfo.href ? urlInfo : typeof urlInfo == 'string' ? $('<a>').attr('href', urlInfo)[0] : location;
-            var path = decodeURI(urlInfo.pathname).replace(/\/$/, ''),
-                pUrl = urlInfo.pathname + urlInfo.search,
+            urlInfo = urlInfo.href ? urlInfo : typeof urlInfo == 'string' ? $('<a>').attr('href', urlInfo)[0] : document.location;
+            var pathname = urlInfo.pathname.indexOf('/') == 0 ? 
+                    urlInfo.pathname : '/' + urlInfo.pathname,
+                path = decodeURI(pathname).replace(/\/$/, ''),
+                pUrl = pathname + urlInfo.search,
                 route = R.routes[path || '/'];
             
             if(!route || pUrl === current) return;
@@ -66,9 +68,9 @@
         }
     });
     
-    $(function(){ R.route(location, preRenderPage); });
+    $(function(){ R.route(document.location, preRenderPage); });
     
-    $(W).on('popstate', function(){ R.route(location, preRenderPage); });
+    $(W).on('popstate', function(){ R.route(document.location, preRenderPage); });
     
     $(document).on('click', 'a', function(e)
     {
