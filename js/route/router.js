@@ -66,20 +66,20 @@
         }
     });
     
-    $(function(){ R.route(location, renderPageHeader); });
+    $(function(){ R.route(location, preRenderPage); });
     
-    $(W).on('popstate', function(){ R.route(location, renderPageHeader); });
+    $(W).on('popstate', function(){ R.route(location, preRenderPage); });
     
     $(document).on('click', 'a', function(e)
     {
         if(this.getAttribute('href').indexOf('/') == 0)
         {
             e.preventDefault();
-            R.route(this, renderPageHeader);
+            R.route(this, preRenderPage);
         }
     });
     
-    function renderPageHeader(route, routeInfo)
+    function preRenderPage(route, routeInfo)
     {
         $body.removeClass().addClass(route.bodyClass || '');
         var $pageNav = $body.find('#pageNav'), 
@@ -92,10 +92,8 @@
         }
         $pageNav.empty();
         path != '/' && $pageNav.html(navs);
-        
-        $pageBody.find('> .container')
-        .animate({opacity: 0, width: 0}, 400, 'linear', 
-            function(){ $(this).empty().remove(); });
+        $pageBody.find('> .container').animate({opacity: 0, marginLeft: '-100%'}, 400, 'linear', function()
+        { $(this).empty().remove(); });
     }
 
 })(jQuery, window);
