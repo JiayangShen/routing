@@ -9,7 +9,7 @@ This framework is based on [jQuery](http://jquery.com), [HTML5 History API](http
 - The core of this framework is a micro routing system based on HTML History API and a CSS、JS file loader -- [jQuery NeedJS](https://github.com/JiayangShen/jquery-need/).
 - The rule of routing is to watch the changes of `pathname` and `search` part of a url, not `hash`.
 - When the url change is captured, load CSS、JS and AJAX related to the module of the new url in parallel while preserving execution order.
-- All routing infomation is stored in a static route tale, including CSS、JS files and AJAX actions infomation to initialize a module, and most of the route infomation is optional.
+- All routing infomation is stored in a static route table, including CSS、JS files and AJAX actions infomation to initialize a module, and most of the route infomation is optional.
 - Conventionally, use `pathname` of a url to identify the rule of a route, module's name and namespace is also mapped to `pathname`.
 - Though not well sealed and decoupled, the source code is simple, you can change it in your demand freely.
 
